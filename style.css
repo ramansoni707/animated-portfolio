@@ -136,3 +136,364 @@ section.section{scroll-margin-top:110px}
 @media(max-width:1100px){.hero{grid-template-columns:1fr;min-height:auto;padding-top:145px}.hero-copy{max-width:800px}.hero-scene{width:min(620px,100%);margin:30px auto 0;transform:none}.hero-badge-stack{display:none}}
 @media(max-width:900px){.hero{padding-top:130px}.hero h1{font-size:clamp(44px,10vw,64px)}.hero-scene{height:500px;transform:scale(.9);transform-origin:top center;margin-bottom:-45px}.impact-grid{grid-template-columns:1fr;gap:45px}.impact-copy h2{max-width:650px}}
 @media(max-width:600px){.hero{padding-top:115px}.hero h1{font-size:45px}.hero-sub{font-size:14px}.hero-scene{height:455px;transform:scale(.76);margin-bottom:-75px}.hero-stats{gap:18px}.hero-stats span{font-size:9px}.impact{padding-top:85px;padding-bottom:85px}.impact-grid{gap:35px}.impact-copy h2{font-size:40px}}
+
+/* ===== V5 TYPOGRAPHY / NO-OVERFLOW FIX ===== */
+html,body{max-width:100%;overflow-x:hidden}
+main,section,.section,.hero,.impact,.impact-grid,.impact-copy,.impact-items{min-width:0;max-width:100%}
+
+/* Never allow decorative labels to sit on top of important copy */
+.hero-badge-stack{
+  display:none !important;
+}
+
+/* Give large headings predictable wrapping at every viewport */
+.hero-copy,.about-title,.section-heading,.impact-copy,.contact-copy,.edu-main{min-width:0}
+.hero h1,.about h2,.section-heading h2,.impact-copy h2,.contact-copy h2,.edu-main h2{
+  max-width:100%;
+  overflow-wrap:normal;
+  word-break:normal;
+  hyphens:none;
+}
+
+/* Impact section: no forced 500px child and no horizontal clipping */
+.impact-grid{
+  width:100%;
+  grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);
+}
+.impact-copy{width:100%}
+.impact-copy h2{width:100%;font-size:clamp(38px,4.5vw,61px)}
+.impact-items{width:100%;min-width:0}
+.impact-item{min-width:0;width:100%}
+.impact-item div{min-width:0}
+.impact-item p{overflow-wrap:anywhere}
+
+/* Hero stays elegant on medium screens */
+@media(max-width:1100px){
+  .hero{
+    grid-template-columns:minmax(0,1fr);
+    width:min(100% - 36px,1180px);
+  }
+  .hero-copy{width:100%;min-width:0}
+  .hero h1{max-width:760px}
+  .hero-scene{max-width:620px;width:100%}
+  .impact-grid{grid-template-columns:minmax(0,1fr);gap:45px}
+}
+
+/* Mobile: typography first, decoration second */
+@media(max-width:600px){
+  .section{width:calc(100% - 30px);padding-left:0;padding-right:0}
+  .hero{width:calc(100% - 30px);padding-top:115px}
+  .hero h1{
+    font-size:clamp(39px,12vw,48px);
+    line-height:1.02;
+    letter-spacing:-.045em;
+  }
+  .hero-sub{font-size:13px;line-height:1.75}
+  .hero-actions{width:100%}
+  .hero-actions .btn{padding:12px 15px}
+  .hero-scene{transform:scale(.70);transform-origin:top center;margin-bottom:-110px}
+
+  .impact{
+    width:100%;
+    padding:90px 15px;
+    overflow:hidden;
+  }
+  .impact-grid{
+    width:100%;
+    gap:35px;
+  }
+  .impact-copy h2{
+    font-size:clamp(36px,11vw,44px);
+    line-height:1.06;
+    letter-spacing:-.045em;
+  }
+  .impact-copy .section-intro{
+    font-size:13px;
+    line-height:1.75;
+    max-width:100%;
+  }
+  .impact-item{
+    grid-template-columns:32px minmax(0,1fr) 20px;
+    padding:18px 16px;
+    border-radius:17px;
+  }
+  .impact-item h3{font-size:15px}
+  .impact-item p{font-size:10px;line-height:1.55}
+}
+
+/* Ultra narrow phones */
+@media(max-width:380px){
+  .hero h1{font-size:37px}
+  .section-heading h2,.about h2,.contact-copy h2,.edu-main h2{font-size:36px}
+  .impact-copy h2{font-size:35px}
+  .hero-scene{transform:scale(.62);margin-bottom:-145px}
+}
+
+/* ===== V6 MOBILE CANVAS / HORIZONTAL CLIP FIX ===== */
+*,*::before,*::after{max-width:100%}
+html{width:100%;overflow-x:hidden}
+body{width:100%;min-width:0;overflow-x:hidden}
+main{width:100%;min-width:0;overflow-x:hidden}
+.section{box-sizing:border-box}
+
+/* Decorative fixed elements must never enlarge the layout */
+.aurora,.cursor-glow,.scroll-progress,#particleCanvas,.ambient-noise,
+.hero-grid,.scene-halo,.orbit,.orbit-one,.orbit-two{max-width:none}
+
+/* Mobile/tablet must use the viewport, not a centered desktop canvas */
+@media(max-width:1100px){
+  .nav{
+    left:15px;
+    right:15px;
+    transform:none;
+    width:auto;
+    max-width:none;
+  }
+  .hero,
+  .about,
+  .skills,
+  .experience,
+  .projects,
+  .education,
+  .contact,
+  .impact{
+    box-sizing:border-box;
+    width:100%;
+    max-width:100%;
+    margin-left:0;
+    margin-right:0;
+  }
+  .hero{padding-left:22px;padding-right:22px}
+  .about,.skills,.projects,.education,.contact{padding-left:22px;padding-right:22px}
+  .experience{padding-left:22px;padding-right:22px}
+  .impact{padding-left:22px;padding-right:22px}
+  .hero-copy,.hero-scene,.about-grid,.about-cards,.skill-stage,.skill-list,
+  .timeline,.project-grid,.edu-grid,.contact-grid,.impact-grid,
+  .section-heading,.about-title,.about-copy,.contact-copy,.contact-form{
+    width:100%;
+    max-width:100%;
+    min-width:0;
+  }
+  .hero-scene{overflow:visible}
+  .project-card,.time-content,.info-card,.edu-main,.edu-side,.contact-form,.impact-item{
+    min-width:0;
+    max-width:100%;
+  }
+}
+
+/* Real phone layout */
+@media(max-width:600px){
+  .nav{
+    top:10px;
+    left:10px;
+    right:10px;
+    width:auto;
+    height:62px;
+    padding:0 12px;
+    border-radius:18px;
+  }
+  .brand{font-size:13px}
+  .brand>span{width:32px;height:32px}
+
+  .hero{
+    width:100%;
+    padding:105px 15px 60px;
+    display:block;
+    min-height:0;
+  }
+  .hero-copy{width:100%;max-width:100%}
+  .hero h1{
+    width:100%;
+    max-width:100%;
+    font-size:clamp(38px,12vw,48px);
+    line-height:1.02;
+    letter-spacing:-.045em;
+    white-space:normal;
+  }
+  .hero-sub{width:100%;max-width:100%;font-size:13px}
+  .hero-actions{width:100%;display:flex}
+  .hero-stats{width:100%;display:flex;flex-wrap:wrap}
+  .hero-scene{
+    width:100%;
+    max-width:420px;
+    height:420px;
+    margin:25px auto -40px;
+    transform:scale(.66);
+    transform-origin:top center;
+  }
+
+  .about,.skills,.projects,.education,.contact{
+    width:100%;
+    padding-left:15px;
+    padding-right:15px;
+  }
+  .experience{
+    width:100%;
+    padding-left:15px;
+    padding-right:15px;
+  }
+  .impact{
+    width:100%;
+    padding:80px 15px;
+  }
+  .impact-grid{
+    display:grid;
+    grid-template-columns:minmax(0,1fr);
+    width:100%;
+    gap:32px;
+  }
+  .impact-copy,.impact-items{width:100%;min-width:0}
+  .impact-copy h2{
+    width:100%;
+    max-width:100%;
+    font-size:clamp(34px,10.5vw,43px);
+    line-height:1.05;
+    overflow-wrap:break-word;
+  }
+  .section-intro{width:100%;max-width:100%;font-size:12px}
+  .impact-item{
+    width:100%;
+    max-width:100%;
+    grid-template-columns:28px minmax(0,1fr) 18px;
+  }
+
+  .section-heading h2,.about h2,.contact-copy h2,.edu-main h2{
+    max-width:100%;
+    width:100%;
+    overflow-wrap:break-word;
+  }
+  .section-label{font-size:9px}
+
+  /* Hide only non-essential decorative desktop elements on phones */
+  .command-hint,.hero-badge-stack{display:none!important}
+}
+
+/* Very narrow screens */
+@media(max-width:390px){
+  .nav{left:7px;right:7px}
+  .hero h1{font-size:37px}
+  .hero{padding-left:14px;padding-right:14px}
+  .impact,.about,.skills,.projects,.education,.contact,.experience{
+    padding-left:14px;padding-right:14px;
+  }
+  .hero-scene{transform:scale(.59);margin-bottom:-105px}
+}
+
+/* ===== V7 IMPACT / DESKTOP CARD REFINEMENT ===== */
+.impact{
+  overflow:hidden;
+}
+.impact-grid{
+  width:min(1080px,100%);
+  max-width:1080px;
+  margin:0 auto;
+  grid-template-columns:minmax(330px,.88fr) minmax(0,1.12fr);
+  gap:55px;
+  align-items:center;
+}
+.impact-copy{
+  padding-right:10px;
+}
+.impact-copy h2{
+  font-size:clamp(42px,4.1vw,58px);
+  max-width:500px;
+}
+.impact-copy .section-intro{
+  max-width:470px;
+}
+.impact-items{
+  width:100%;
+  min-width:0;
+  gap:12px;
+}
+.impact-item{
+  width:100%;
+  min-width:0;
+  min-height:112px;
+  padding:21px 22px;
+  display:grid;
+  grid-template-columns:38px minmax(0,1fr) 24px;
+  gap:16px;
+  align-items:center;
+  border-radius:20px;
+  background:linear-gradient(135deg,rgba(255,255,255,.94),rgba(251,248,255,.82));
+  border:1px solid rgba(126,93,176,.12);
+  box-shadow:0 14px 35px rgba(81,48,137,.055);
+}
+.impact-item>b{
+  align-self:start;
+  padding-top:3px;
+  font-size:10px;
+  color:#a08bad;
+}
+.impact-item div{
+  min-width:0;
+}
+.impact-item h3{
+  font-size:16px;
+  line-height:1.3;
+  white-space:normal;
+}
+.impact-item p{
+  margin-top:6px;
+  max-width:100%;
+  font-size:11px;
+  line-height:1.55;
+  white-space:normal;
+  overflow-wrap:normal;
+  word-break:normal;
+}
+.impact-item>span{
+  width:28px;
+  height:28px;
+  display:grid;
+  place-items:center;
+  border-radius:9px;
+  background:#f1e9ff;
+  color:#8b5cf6;
+  font-size:13px;
+  transition:.3s;
+}
+.impact-item:hover>span{
+  background:#8b5cf6;
+  color:#fff;
+  transform:rotate(8deg);
+}
+.impact-item:hover{
+  transform:translateY(-4px);
+  box-shadow:0 20px 50px rgba(81,48,137,.11);
+}
+
+@media(min-width:1101px){
+  .impact .section-label{
+    width:min(1080px,100%);
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+
+@media(max-width:1100px){
+  .impact-grid{
+    width:100%;
+    max-width:760px;
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+  .impact-copy h2{
+    max-width:650px;
+  }
+  .impact-copy .section-intro{
+    max-width:620px;
+  }
+}
+
+@media(max-width:600px){
+  .impact-item{
+    min-height:0;
+    padding:18px 16px;
+    grid-template-columns:28px minmax(0,1fr) 18px;
+    gap:10px;
+  }
+  .impact-item h3{font-size:15px}
+  .impact-item p{font-size:10px}
+}
