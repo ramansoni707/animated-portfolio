@@ -12,6 +12,10 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="ambient-noise"></div>
+  <canvas id="particleCanvas"></canvas>
+  <div class="aurora aurora-a"></div><div class="aurora aurora-b"></div>
+  <div class="command-hint"><kbd>⌘</kbd><span>Press K to explore</span></div>
   <div class="loader" id="loader">
     <div class="loader-orb"></div>
     <div class="loader-text">RAMAN<span>.DEV</span></div>
@@ -38,6 +42,9 @@
   <main>
     <section class="hero section" id="home">
       <div class="hero-grid"></div>
+      <div class="hero-badge-stack">
+        <span>FULL STACK</span><span>AI AUTOMATION</span><span>MOBILE</span>
+      </div>
       <div class="hero-copy reveal">
         <div class="eyebrow"><i></i> Available for opportunities</div>
         <h1>Building digital<br><span class="gradient-text">experiences</span> that<br>feel <span class="typed" id="typed">alive.</span></h1>
@@ -49,6 +56,7 @@
           <a class="btn primary magnetic" href="#projects">Explore my work <span>↗</span></a>
           <a class="btn ghost magnetic" href="Raman-Kumar-Resume.pdf" download>Download CV <span>↓</span></a>
         </div>
+        <div class="terminal-pill"><span class="term-dot"></span><span id="terminalText">Building digital experiences...</span><b>▌</b></div>
         <div class="hero-stats">
           <div><strong>3+</strong><span>Years experience</span></div>
           <div><strong>6</strong><span>Featured projects</span></div>
@@ -157,7 +165,11 @@
 
     <section class="section experience" id="experience">
       <div class="section-label">03 / Journey</div>
-      <div class="section-heading reveal"><p class="mini-kicker">Where I've been</p><h2>Experience that <span class="gradient-text">shaped me.</span></h2></div>
+      <div class="section-heading reveal">
+        <p class="mini-kicker">Where I've been</p>
+        <h2>Experience that <span class="gradient-text">shaped me.</span></h2>
+        <p class="section-intro">A progression from hands-on training to building production web, mobile and AI-powered business platforms.</p>
+      </div>
       <div class="timeline">
         <article class="timeline-item reveal">
           <div class="time-dot"></div>
@@ -186,6 +198,10 @@
           </div>
         </article>
       </div>
+    </section>
+
+    <section class="section marquee-section">
+      <div class="marquee"><div>CODE <span>✦</span> CREATE <span>✦</span> SHIP <span>✦</span> SCALE <span>✦</span> CODE <span>✦</span> CREATE <span>✦</span> SHIP <span>✦</span> SCALE <span>✦</span></div></div>
     </section>
 
     <section class="section projects" id="projects">
@@ -230,6 +246,18 @@
       </div>
     </section>
 
+    <section class="section impact">
+      <div class="section-label">05 / Impact</div>
+      <div class="impact-grid">
+        <div class="impact-copy reveal"><p class="mini-kicker">What I bring</p><h2>More than a developer.<br><span class="gradient-text">A product mindset.</span></h2></div>
+        <div class="impact-items">
+          <article class="impact-item reveal"><b>01</b><div><h3>Think end-to-end</h3><p>From interface and API design to database logic, authentication and deployment.</p></div><span>↗</span></article>
+          <article class="impact-item reveal"><b>02</b><div><h3>Build for real users</h3><p>Responsive interfaces, practical workflows and performance-focused solutions.</p></div><span>↗</span></article>
+          <article class="impact-item reveal"><b>03</b><div><h3>Connect systems</h3><p>Third-party APIs and business automation that make disconnected tools work together.</p></div><span>↗</span></article>
+        </div>
+      </div>
+    </section>
+
     <section class="section education">
       <div class="section-label">05 / Education</div>
       <div class="edu-grid">
@@ -268,6 +296,17 @@
     <p>© <span id="year"></span> Raman Kumar</p>
   </footer>
 
+  <div class="command-palette" id="commandPalette">
+    <div class="palette-card">
+      <div class="palette-head"><span>Quick navigation</span><kbd>ESC</kbd></div>
+      <button data-go="#home">⌂ <span>Home</span><small>01</small></button>
+      <button data-go="#about">✦ <span>About</span><small>02</small></button>
+      <button data-go="#skills">◈ <span>Skills</span><small>03</small></button>
+      <button data-go="#experience">⌁ <span>Experience</span><small>04</small></button>
+      <button data-go="#projects">▣ <span>Projects</span><small>05</small></button>
+      <button data-go="#contact">✉ <span>Contact</span><small>06</small></button>
+    </div>
+  </div>
   <button class="top-btn" id="topBtn" aria-label="Back to top">↑</button>
   <script src="script.js"></script>
 </body>

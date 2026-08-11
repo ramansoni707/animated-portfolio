@@ -100,3 +100,47 @@ $("#contactForm").addEventListener("submit", e=>{
 document.addEventListener("keydown", e=>{
   if(e.key==="Escape") nav.classList.remove("open");
 });
+
+/* ===== PREMIUM V2 INTERACTIONS ===== */
+const canvas=document.getElementById("particleCanvas"), ctx=canvas.getContext("2d");
+let particles=[], mouse={x:innerWidth/2,y:innerHeight/2};
+function resizeCanvas(){canvas.width=innerWidth;canvas.height=innerHeight}
+resizeCanvas(); addEventListener("resize",resizeCanvas);
+for(let i=0;i<55;i++) particles.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.8+.4,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22});
+addEventListener("pointermove",e=>mouse={x:e.clientX,y:e.clientY});
+function particlesLoop(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  particles.forEach(p=>{
+    p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>canvas.width)p.vx*=-1;if(p.y<0||p.y>canvas.height)p.vy*=-1;
+    const dx=p.x-mouse.x,dy=p.y-mouse.y,d=Math.sqrt(dx*dx+dy*dy);
+    if(d<130){p.x+=dx/d*.25;p.y+=dy/d*.25}
+    ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle="rgba(139,92,246,.35)";ctx.fill();
+  });
+  requestAnimationFrame(particlesLoop);
+}
+particlesLoop();
+
+const terminalText=document.getElementById("terminalText");
+const terminalLines=["Building digital experiences...","Connecting APIs + databases...","Shipping AI-powered workflows...","Crafting clean interfaces...","Turning ideas into products..."];
+let tl=0,tc=0;
+function terminalLoop(){
+  const word=terminalLines[tl];
+  terminalText.textContent=word.slice(0,tc++);
+  if(tc>word.length){tl=(tl+1)%terminalLines.length;tc=0;setTimeout(terminalLoop,700);return}
+  setTimeout(terminalLoop,42);
+}
+terminalLoop();
+
+const palette=document.getElementById("commandPalette");
+function openPalette(){palette.classList.add("open");document.body.style.overflow="hidden"}
+function closePalette(){palette.classList.remove("open");document.body.style.overflow=""}
+addEventListener("keydown",e=>{
+  if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k"){e.preventDefault();openPalette()}
+  if(e.key.toLowerCase()==="k"&&!e.ctrlKey&&!e.metaKey&&document.activeElement.tagName!=="INPUT"&&document.activeElement.tagName!=="TEXTAREA")openPalette();
+  if(e.key==="Escape")closePalette();
+});
+palette.addEventListener("click",e=>{
+  const btn=e.target.closest("[data-go]");
+  if(btn){closePalette();document.querySelector(btn.dataset.go)?.scrollIntoView({behavior:"smooth"})}
+  if(e.target===palette)closePalette();
+});
