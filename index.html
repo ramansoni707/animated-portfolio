@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#8b5cf6" />
+  <meta name="description" content="Raman Kumar — .NET Full Stack Developer portfolio." />
+  <title>Raman Kumar | .NET Full Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient-noise"></div>
+  <canvas id="particleCanvas"></canvas>
+  <div class="aurora aurora-a"></div><div class="aurora aurora-b"></div>
+  <div class="command-hint"><kbd>⌘</kbd><span>Press K to explore</span></div>
+  <div class="loader" id="loader">
+    <div class="loader-orb"></div>
+    <div class="loader-text">RAMAN<span>.DEV</span></div>
+    <div class="loader-bar"><i></i></div>
+  </div>
+
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#home"><span>R</span><b>RAMAN</b><em>.DEV</em></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav id="navLinks">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Let's talk <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-grid"></div>
+      <div class="hero-badge-stack">
+        <span>FULL STACK</span><span>AI AUTOMATION</span><span>MOBILE</span>
+      </div>
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><i></i> Available for opportunities</div>
+        <h1>Building digital<br><span class="gradient-text">experiences</span> that<br>feel <span class="typed" id="typed">alive.</span></h1>
+        <p class="hero-sub">
+          I'm <strong>Raman Kumar</strong>, a .NET Full Stack Developer crafting scalable web,
+          mobile and AI-powered business solutions with .NET, React, Vue and SQL Server.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary magnetic" href="#projects">Explore my work <span>↗</span></a>
+          <a class="btn ghost magnetic" href="Raman-Kumar-Resume.pdf" download>Download CV <span>↓</span></a>
+        </div>
+        <div class="terminal-pill"><span class="term-dot"></span><span id="terminalText">Building digital experiences...</span><b>▌</b></div>
+        <div class="hero-stats">
+          <div><strong>3+</strong><span>Years experience</span></div>
+          <div><strong>6</strong><span>Featured projects</span></div>
+          <div><strong>10+</strong><span>Core technologies</span></div>
+        </div>
+      </div>
+
+      <div class="hero-scene reveal">
+        <div class="scene-halo"></div>
+        <div class="code-window">
+          <div class="window-bar"><span></span><span></span><span></span><b>Raman.dev</b></div>
+          <div class="code-lines">
+            <p><i>01</i><span class="c-purple">const</span> developer = {</p>
+            <p><i>02</i>&nbsp;&nbsp;name: <span class="c-green">'Raman Kumar'</span>,</p>
+            <p><i>03</i>&nbsp;&nbsp;role: <span class="c-green">'.NET Full Stack'</span>,</p>
+            <p><i>04</i>&nbsp;&nbsp;craft: [<span class="c-green">'Web'</span>, <span class="c-green">'Mobile'</span>],</p>
+            <p><i>05</i>&nbsp;&nbsp;coffee: <span class="c-orange">true</span></p>
+            <p><i>06</i>};</p>
+            <p><i>07</i><span class="c-purple">await</span> build(<span class="c-green">'something great'</span>);</p>
+          </div>
+        </div>
+
+        <!-- Animated character: pure HTML/CSS, no image required -->
+        <div class="character" id="character">
+          <div class="shadow"></div>
+          <div class="char-body">
+            <div class="neck"></div>
+            <div class="head">
+              <div class="hair"></div>
+              <div class="ear left"></div><div class="ear right"></div>
+              <div class="face">
+                <div class="eye left"><i></i></div><div class="eye right"><i></i></div>
+                <div class="brow left"></div><div class="brow right"></div>
+                <div class="nose"></div><div class="mouth"></div>
+              </div>
+              <div class="glasses"><span></span><span></span><i></i></div>
+            </div>
+            <div class="torso">
+              <div class="shirt-logo">&lt;/&gt;</div>
+              <div class="arm left"><div class="hand"></div></div>
+              <div class="arm right"><div class="hand"></div></div>
+            </div>
+          </div>
+          <div class="laptop">
+            <div class="screen"><span>0101</span><b>AI</b><small>.NET</small></div>
+            <div class="keyboard"></div>
+          </div>
+        </div>
+
+        <div class="float-chip chip-dotnet">.NET</div>
+        <div class="float-chip chip-react">⚛ React</div>
+        <div class="float-chip chip-sql">SQL</div>
+        <div class="float-chip chip-ai">✦ AI</div>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+      </div>
+      <a class="scroll-cue" href="#about"><span>Scroll to explore</span><i>↓</i></a>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="section-label">01 / About me</div>
+      <div class="about-grid">
+        <div class="about-title reveal">
+          <p class="mini-kicker">Code. Design. Problem solve.</p>
+          <h2>I turn complex ideas into <span class="gradient-text">simple products.</span></h2>
+        </div>
+        <div class="about-copy reveal">
+          <p>I'm a BCA graduate and Full Stack Developer with 3+ years of hands-on experience building web and mobile applications.</p>
+          <p>My work spans <strong>.NET Core, ASP.NET, React, React Native, Vue.js, .NET MAUI, REST APIs and SQL Server</strong> — from internal business systems to AI-powered automation platforms.</p>
+          <div class="about-tags"><span>Problem Solver</span><span>API Builder</span><span>UI Engineer</span><span>Database Thinker</span></div>
+        </div>
+      </div>
+      <div class="about-cards">
+        <article class="info-card reveal tilt">
+          <div class="card-icon">⌘</div><h3>Full Stack</h3><p>Frontend to backend, APIs, authentication and data — I build the whole flow.</p>
+        </article>
+        <article class="info-card reveal tilt">
+          <div class="card-icon">✦</div><h3>AI & Automation</h3><p>Building practical AI-driven workflows and document automation for real businesses.</p>
+        </article>
+        <article class="info-card reveal tilt">
+          <div class="card-icon">◉</div><h3>Mobile</h3><p>Cross-platform Android and iOS experiences with React Native and .NET MAUI.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section skills" id="skills">
+      <div class="section-label">02 / Tech stack</div>
+      <div class="section-heading reveal">
+        <p class="mini-kicker">Tools I love to build with</p>
+        <h2>My <span class="gradient-text">toolbox.</span></h2>
+      </div>
+      <div class="skill-stage reveal">
+        <div class="skill-center"><span>RAMAN</span><b>DEV</b></div>
+        <div class="skill-orbit s1"><span>.NET</span></div>
+        <div class="skill-orbit s2"><span>React</span></div>
+        <div class="skill-orbit s3"><span>SQL</span></div>
+        <div class="skill-orbit s4"><span>Vue</span></div>
+        <div class="skill-orbit s5"><span>MAUI</span></div>
+        <div class="skill-orbit s6"><span>Azure</span></div>
+      </div>
+      <div class="skill-list reveal">
+        <span>C#</span><span>.NET Core</span><span>ASP.NET MVC</span><span>Web API</span><span>ADO.NET</span>
+        <span>Entity Framework</span><span>React.js</span><span>React Native</span><span>Vue.js</span><span>.NET MAUI</span>
+        <span>JavaScript</span><span>HTML</span><span>CSS</span><span>SQL Server</span><span>MySQL</span><span>JWT</span><span>Git</span>
+      </div>
+    </section>
+
+    <section class="section experience" id="experience">
+      <div class="section-label">03 / Journey</div>
+      <div class="section-heading reveal">
+        <p class="mini-kicker">Where I've been</p>
+        <h2>Experience that <span class="gradient-text">shaped me.</span></h2>
+        <p class="section-intro">A progression from hands-on training to building production web, mobile and AI-powered business platforms.</p>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <div class="time-dot"></div>
+          <div class="time-meta"><span>01/2025 — Present</span><small>Mohali, India</small></div>
+          <div class="time-content">
+            <span class="company-pill">Current</span><h3>Cipher Studio Private Limited</h3><h4>Full Stack Developer</h4>
+            <p>Developed and maintained web and mobile applications using .NET Core, React.js, React Native, .NET MAUI and SQL Server. Integrated RESTful APIs, authentication and third-party services.</p>
+            <div class="tech-row"><span>.NET</span><span>React</span><span>React Native</span><span>MAUI</span><span>SQL Server</span></div>
+          </div>
+        </article>
+        <article class="timeline-item reveal">
+          <div class="time-dot"></div>
+          <div class="time-meta"><span>05/2023 — 12/2024</span><small>Chandigarh, India</small></div>
+          <div class="time-content">
+            <h3>Anthem Infotech Private Limited</h3><h4>.NET Full Stack Developer</h4>
+            <p>Built scalable full-stack applications, REST APIs, authentication modules, database-driven solutions and responsive interfaces. Optimized SQL queries and backend processes and worked in Agile teams.</p>
+            <div class="tech-row"><span>.NET Core</span><span>React</span><span>SQL</span><span>REST API</span><span>Chart.js</span></div>
+          </div>
+        </article>
+        <article class="timeline-item reveal">
+          <div class="time-dot"></div>
+          <div class="time-meta"><span>08/2022 — 03/2023</span><small>Chandigarh, India</small></div>
+          <div class="time-content">
+            <h3>CS Soft. Solutions</h3><h4>Full Stack Trainee</h4>
+            <p>Hands-on training in React.js, .NET Core, REST APIs and SQL Server with frontend/backend development, database integration, authentication, testing, debugging and optimization.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section marquee-section">
+      <div class="marquee"><div>CODE <span>✦</span> CREATE <span>✦</span> SHIP <span>✦</span> SCALE <span>✦</span> CODE <span>✦</span> CREATE <span>✦</span> SHIP <span>✦</span> SCALE <span>✦</span></div></div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="section-label">04 / Selected work</div>
+      <div class="section-heading reveal"><p class="mini-kicker">Things I've built</p><h2>Projects with <span class="gradient-text">purpose.</span></h2></div>
+      <div class="project-grid">
+        <article class="project-card featured reveal" data-project="ezzy">
+          <div class="project-top"><span class="project-number">01</span><span class="project-type">AI PLATFORM</span></div>
+          <div class="project-visual visual-ezzy"><div class="visual-window"><span>INVOICE</span><b>AI</b><i></i><i></i><i></i></div><div class="spark">✦</div></div>
+          <div class="project-info"><h3>EzzyBills AI Platform</h3><p>AI-powered document and invoice automation platform with integrations and automated business workflows.</p><div class="project-tech"><span>Vue.js</span><span>.NET</span><span>Azure</span><span>SQL</span></div><a href="https://ui2.ezzydoc.com/" target="_blank" rel="noopener">Live project ↗</a></div>
+        </article>
+
+        <article class="project-card reveal" data-project="melodial">
+          <div class="project-top"><span class="project-number">02</span><span class="project-type">MOBILE</span></div>
+          <div class="project-visual visual-music"><div class="vinyl"></div><div class="equalizer"><i></i><i></i><i></i><i></i><i></i></div></div>
+          <div class="project-info"><h3>Melodial</h3><p>Cross-platform music streaming app with playlists, downloads, search and background playback.</p><div class="project-tech"><span>React Native</span><span>.NET API</span><span>SQL</span></div><a href="https://app.melodial.com/" target="_blank" rel="noopener">Visit app ↗</a></div>
+        </article>
+
+        <article class="project-card reveal" data-project="smrte">
+          <div class="project-top"><span class="project-number">03</span><span class="project-type">CONSTRUCTION AI</span></div>
+          <div class="project-visual visual-smrte"><div class="building"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="crane"></div></div>
+          <div class="project-info"><h3>SmrtE</h3><p>Construction management mobile app supporting projects, tasks, field operations and real-time synchronization.</p><div class="project-tech"><span>.NET MAUI</span><span>Azure API</span><span>SQL</span></div><a href="https://smrte.ai/" target="_blank" rel="noopener">Visit platform ↗</a></div>
+        </article>
+
+        <article class="project-card reveal" data-project="expense">
+          <div class="project-top"><span class="project-number">04</span><span class="project-type">BUSINESS</span></div>
+          <div class="project-visual visual-chart"><div class="chart-bars"><i></i><i></i><i></i><i></i><i></i></div><div class="chart-line"></div></div>
+          <div class="project-info"><h3>Expense Tracking System</h3><p>Full-stack expense management with dashboards, reports, documents, administration and multi-company support.</p><div class="project-tech"><span>React</span><span>.NET Core</span><span>SQL</span></div><a href="http://essentials.antheminfotech.com/" target="_blank" rel="noopener">Live project ↗</a></div>
+        </article>
+
+        <article class="project-card reveal" data-project="attendance">
+          <div class="project-top"><span class="project-number">05</span><span class="project-type">HR SYSTEM</span></div>
+          <div class="project-visual visual-calendar"><div class="calendar"><b>JUNE</b><span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>✓</span><span>07</span></div></div>
+          <div class="project-info"><h3>Attendance Management</h3><p>Employee attendance and leave platform with admin portals, reporting and project tracking.</p><div class="project-tech"><span>React</span><span>.NET API</span><span>JWT</span></div><a href="http://themanagement.workanthem.com/" target="_blank" rel="noopener">Live project ↗</a></div>
+        </article>
+
+        <article class="project-card reveal" data-project="logistics">
+          <div class="project-top"><span class="project-number">06</span><span class="project-type">LOGISTICS</span></div>
+          <div class="project-visual visual-logistics"><div class="truck">▰</div><div class="road"></div><div class="pin">●</div></div>
+          <div class="project-info"><h3>Logistics Management</h3><p>Role-based logistics system for administrators, accountants and drivers with shift tracking and reporting.</p><div class="project-tech"><span>ASP.NET MVC</span><span>MS SQL</span><span>RBAC</span></div><a href="https://singhlogisticsllc.workanthem.com/" target="_blank" rel="noopener">Live project ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section impact">
+      <div class="section-label">05 / Impact</div>
+      <div class="impact-grid">
+        <div class="impact-copy reveal"><p class="mini-kicker">What I bring</p><h2>More than a developer.<br><span class="gradient-text">A product mindset.</span></h2></div>
+        <div class="impact-items">
+          <article class="impact-item reveal"><b>01</b><div><h3>Think end-to-end</h3><p>From interface and API design to database logic, authentication and deployment.</p></div><span>↗</span></article>
+          <article class="impact-item reveal"><b>02</b><div><h3>Build for real users</h3><p>Responsive interfaces, practical workflows and performance-focused solutions.</p></div><span>↗</span></article>
+          <article class="impact-item reveal"><b>03</b><div><h3>Connect systems</h3><p>Third-party APIs and business automation that make disconnected tools work together.</p></div><span>↗</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section education">
+      <div class="section-label">05 / Education</div>
+      <div class="edu-grid">
+        <div class="edu-main reveal"><p class="mini-kicker">Academic foundation</p><h2>Bachelor's in <span class="gradient-text">Computer Applications.</span></h2><p>HPU, Shimla · Batch 2022</p><div class="achievement"><b>2nd</b><span>position in college<br>3 years · No backlog</span></div></div>
+        <div class="edu-side reveal"><div class="cert-icon">✦</div><h3>.NET Full Stack Development</h3><p>Certified by CS Infotech Pvt. Ltd., Chandigarh.</p><div class="language-row"><span>English</span><span>Hindi</span><span>Punjabi</span></div></div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-glow"></div>
+      <div class="section-label">06 / Contact</div>
+      <div class="contact-grid">
+        <div class="contact-copy reveal">
+          <p class="mini-kicker">Have a project in mind?</p>
+          <h2>Let's make something <span class="gradient-text">extraordinary.</span></h2>
+          <p>Whether you're building a product, modernizing a legacy system or need a full-stack developer — I'd love to hear about it.</p>
+          <div class="contact-links">
+            <a href="mailto:raman.kumar07707@gmail.com"><span>✉</span> raman.kumar07707@gmail.com</a>
+            <a href="tel:+918580507707"><span>⌕</span> +91 85805 07707</a>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contactForm">
+          <label>Your name<input name="name" required placeholder="John Doe"></label>
+          <label>Email address<input type="email" name="email" required placeholder="john@example.com"></label>
+          <label>Tell me about your project<textarea name="message" required rows="5" placeholder="I have an idea for..."></textarea></label>
+          <button class="btn primary magnetic" type="submit">Send message <span>↗</span></button>
+          <small id="formNote">This opens your email app with the message ready to send.</small>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand"><span>R</span><b>RAMAN</b><em>.DEV</em></div>
+    <p>Designed & built with curiosity, caffeine and clean code.</p>
+    <p>© <span id="year"></span> Raman Kumar</p>
+  </footer>
+
+  <div class="command-palette" id="commandPalette">
+    <div class="palette-card">
+      <div class="palette-head"><span>Quick navigation</span><kbd>ESC</kbd></div>
+      <button data-go="#home">⌂ <span>Home</span><small>01</small></button>
+      <button data-go="#about">✦ <span>About</span><small>02</small></button>
+      <button data-go="#skills">◈ <span>Skills</span><small>03</small></button>
+      <button data-go="#experience">⌁ <span>Experience</span><small>04</small></button>
+      <button data-go="#projects">▣ <span>Projects</span><small>05</small></button>
+      <button data-go="#contact">✉ <span>Contact</span><small>06</small></button>
+    </div>
+  </div>
+  <button class="top-btn" id="topBtn" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
