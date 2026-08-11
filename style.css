@@ -497,3 +497,642 @@ main{width:100%;min-width:0;overflow-x:hidden}
   .impact-item h3{font-size:15px}
   .impact-item p{font-size:10px}
 }
+
+/* =========================================================
+   V8 — MOBILE FIRST RESPONSIVE POLISH
+   ========================================================= */
+
+/* Prevent every animated/decorative layer from creating
+   horizontal scroll on phones. */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
+body {
+  position: relative;
+}
+main {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+.section {
+  box-sizing: border-box;
+}
+
+/* ---------------- NAV ---------------- */
+@media (max-width: 760px) {
+  .nav {
+    top: 9px;
+    left: 9px;
+    right: 9px;
+    transform: none;
+    width: auto;
+    height: 60px;
+    padding: 0 12px;
+    border-radius: 17px;
+  }
+
+  .nav .brand {
+    gap: 6px;
+    font-size: 13px;
+  }
+
+  .nav .brand > span {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+  }
+
+  .menu-btn {
+    display: block;
+    width: 40px;
+    padding: 2px;
+  }
+
+  .nav-cta {
+    display: none !important;
+  }
+
+  .nav nav {
+    display: none;
+  }
+
+  .nav.open nav {
+    position: absolute;
+    display: flex;
+    top: 68px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 10px;
+    gap: 2px;
+    background: rgba(255,255,255,.96);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: 0 20px 50px rgba(61,35,91,.14);
+  }
+
+  .nav.open nav a {
+    width: 100%;
+    padding: 12px 13px;
+    border-radius: 10px;
+  }
+
+  .nav.open nav a:hover,
+  .nav.open nav a.active {
+    background: #f3ecff;
+  }
+}
+
+/* ---------------- GLOBAL MOBILE TYPE ---------------- */
+@media (max-width: 760px) {
+  .section {
+    width: 100%;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .section-label {
+    margin-bottom: 30px;
+    font-size: 9px;
+  }
+
+  .mini-kicker {
+    font-size: 9px;
+    margin-bottom: 11px;
+  }
+
+  .section-heading h2,
+  .about h2,
+  .impact-copy h2,
+  .contact-copy h2,
+  .edu-main h2 {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(35px, 10.8vw, 47px);
+    line-height: 1.04;
+    letter-spacing: -.045em;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .section-intro {
+    max-width: 100%;
+    font-size: 12px;
+    line-height: 1.75;
+  }
+}
+
+/* ---------------- HERO ---------------- */
+@media (max-width: 760px) {
+  .hero {
+    display: block;
+    width: 100%;
+    min-height: auto;
+    padding: 110px 16px 55px !important;
+  }
+
+  .hero-copy {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .eyebrow {
+    margin-bottom: 20px;
+    padding: 7px 11px;
+    font-size: 10px;
+  }
+
+  .hero h1 {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(40px, 11.8vw, 52px);
+    line-height: 1;
+    letter-spacing: -.05em;
+  }
+
+  .hero-sub {
+    width: 100%;
+    max-width: 100%;
+    margin: 22px 0;
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .hero-actions {
+    width: 100%;
+    gap: 9px;
+  }
+
+  .hero-actions .btn {
+    flex: 1;
+    justify-content: center;
+    padding: 12px 13px;
+    min-width: 0;
+    font-size: 11px;
+  }
+
+  .hero-stats {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 10px;
+    margin-top: 28px;
+  }
+
+  .hero-stats strong {
+    font-size: 19px;
+  }
+
+  .hero-stats span {
+    font-size: 8px;
+    line-height: 1.35;
+  }
+
+  .terminal-pill {
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 19px;
+    font-size: 9px;
+  }
+
+  .hero-scene {
+    width: 100%;
+    max-width: 430px;
+    height: 390px;
+    margin: 18px auto -35px;
+    transform: scale(.64);
+    transform-origin: top center;
+  }
+
+  .scroll-cue {
+    display: none;
+  }
+
+  .command-hint,
+  .hero-badge-stack {
+    display: none !important;
+  }
+}
+
+/* ---------------- ABOUT ---------------- */
+@media (max-width: 760px) {
+  .about {
+    padding-top: 85px !important;
+    padding-bottom: 85px !important;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .about-copy {
+    padding-top: 0;
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .about-tags {
+    margin-top: 19px;
+  }
+
+  .about-tags span {
+    font-size: 9px;
+    padding: 6px 9px;
+  }
+
+  .about-cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 38px;
+  }
+
+  .info-card {
+    min-height: auto;
+    padding: 23px;
+    border-radius: 20px;
+  }
+
+  .card-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 18px;
+  }
+
+  .info-card h3 {
+    font-size: 18px;
+  }
+
+  .info-card p {
+    font-size: 11px;
+  }
+}
+
+/* ---------------- SKILLS ---------------- */
+@media (max-width: 760px) {
+  .skills {
+    padding-top: 85px !important;
+    padding-bottom: 85px !important;
+  }
+
+  .skill-stage {
+    height: 330px;
+    margin-top: 20px;
+  }
+
+  .skill-center {
+    width: 112px;
+    height: 112px;
+  }
+
+  .skill-center span {
+    font-size: 12px;
+  }
+
+  .skill-center b {
+    font-size: 10px;
+  }
+
+  .skill-orbit {
+    width: 54px;
+    height: 54px;
+    font-size: 9px;
+  }
+
+  .s1 { top: 35px; left: 19%; }
+  .s2 { top: 68px; right: 17%; }
+  .s3 { bottom: 30px; right: 20%; }
+  .s4 { bottom: 15px; left: 17%; }
+  .s5 { top: 150px; left: 4%; }
+  .s6 { top: 160px; right: 4%; }
+
+  .skill-list {
+    gap: 6px;
+  }
+
+  .skill-list span {
+    padding: 8px 10px;
+    font-size: 9px;
+  }
+}
+
+/* ---------------- EXPERIENCE ---------------- */
+@media (max-width: 760px) {
+  .experience {
+    padding-top: 90px !important;
+    padding-bottom: 90px !important;
+  }
+
+  .experience .section-heading {
+    margin-bottom: 48px;
+  }
+
+  .experience .timeline {
+    width: 100%;
+    padding-left: 25px;
+  }
+
+  .experience .timeline:before {
+    left: 5px;
+    width: 2px;
+    transform: none;
+  }
+
+  .experience .timeline-item,
+  .experience .timeline-item:nth-child(odd),
+  .experience .timeline-item:nth-child(even) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 7px;
+    padding-bottom: 35px;
+  }
+
+  .experience .timeline-item:nth-child(odd) .time-meta,
+  .experience .timeline-item:nth-child(even) .time-meta {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 0;
+    text-align: left;
+  }
+
+  .experience .timeline-item:nth-child(odd) .time-content,
+  .experience .timeline-item:nth-child(even) .time-content {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .experience .time-dot {
+    left: 5px;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    border-width: 4px;
+  }
+
+  .experience .time-meta span {
+    font-size: 10px;
+  }
+
+  .experience .time-meta small {
+    font-size: 9px;
+    margin-top: 4px;
+  }
+
+  .experience .time-content {
+    width: 100%;
+    min-height: 0;
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .experience .time-content h3 {
+    font-size: 19px;
+  }
+
+  .experience .time-content h4 {
+    font-size: 10px;
+  }
+
+  .experience .time-content p {
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  .experience .tech-row {
+    margin-top: 16px;
+  }
+
+  .tech-row span {
+    font-size: 8px;
+    padding: 6px 8px;
+  }
+}
+
+/* ---------------- PROJECTS ---------------- */
+@media (max-width: 760px) {
+  .projects {
+    padding-top: 90px !important;
+    padding-bottom: 90px !important;
+  }
+
+  .project-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 42px;
+  }
+
+  .project-card,
+  .project-card.featured {
+    width: 100%;
+    grid-column: span 1;
+    display: block;
+    border-radius: 22px;
+  }
+
+  .project-visual {
+    width: 100%;
+    min-height: 220px;
+  }
+
+  .project-info {
+    padding: 23px;
+  }
+
+  .project-info h3 {
+    font-size: 21px;
+  }
+
+  .project-info p {
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  .project-tech span {
+    font-size: 8px;
+    padding: 6px 8px;
+  }
+
+  .project-info > a {
+    font-size: 10px;
+  }
+}
+
+/* ---------------- IMPACT ---------------- */
+@media (max-width: 760px) {
+  .impact {
+    width: 100%;
+    padding: 90px 16px !important;
+  }
+
+  .impact-grid {
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .impact-copy {
+    padding-right: 0;
+  }
+
+  .impact-copy h2 {
+    font-size: clamp(36px, 10.5vw, 45px);
+  }
+
+  .impact-copy .section-intro {
+    font-size: 12px;
+  }
+
+  .impact-items {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .impact-item {
+    width: 100%;
+    min-height: 0;
+    padding: 17px 15px;
+    grid-template-columns: 27px minmax(0,1fr) 20px;
+    gap: 10px;
+    border-radius: 17px;
+  }
+
+  .impact-item h3 {
+    font-size: 14px;
+  }
+
+  .impact-item p {
+    font-size: 9.5px;
+    line-height: 1.55;
+  }
+
+  .impact-item > span {
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+  }
+}
+
+/* ---------------- EDUCATION ---------------- */
+@media (max-width: 760px) {
+  .education {
+    padding-top: 90px !important;
+    padding-bottom: 90px !important;
+  }
+
+  .edu-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .edu-main,
+  .edu-side {
+    width: 100%;
+    padding: 26px;
+    border-radius: 22px;
+  }
+
+  .achievement {
+    margin-top: 26px;
+  }
+
+  .achievement b {
+    font-size: 44px;
+  }
+
+  .edu-side h3 {
+    font-size: 21px;
+  }
+
+  .edu-side p {
+    font-size: 11px;
+  }
+}
+
+/* ---------------- CONTACT ---------------- */
+@media (max-width: 760px) {
+  .contact {
+    min-height: auto;
+    padding-top: 90px !important;
+    padding-bottom: 90px !important;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .contact-copy > p:not(.mini-kicker) {
+    font-size: 12px;
+    line-height: 1.75;
+  }
+
+  .contact-links a {
+    font-size: 10px;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 21px;
+    border-radius: 21px;
+  }
+}
+
+/* ---------------- FOOTER ---------------- */
+@media (max-width: 760px) {
+  footer {
+    padding: 28px 16px;
+    gap: 12px;
+    text-align: center;
+  }
+
+  footer p {
+    font-size: 9px;
+  }
+}
+
+/* ---------------- TOUCH DEVICES ---------------- */
+@media (hover:none) {
+  .tilt:hover,
+  .project-card:hover,
+  .info-card:hover,
+  .impact-item:hover {
+    transform: none;
+  }
+
+  .cursor-glow {
+    display: none;
+  }
+}
+
+/* ---------------- 360px SAFETY ---------------- */
+@media (max-width:380px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-actions .btn {
+    font-size: 10px;
+    padding: 11px 9px;
+  }
+
+  .hero-scene {
+    transform: scale(.57);
+    margin-bottom: -115px;
+  }
+
+  .impact-copy h2 {
+    font-size: 34px;
+  }
+
+  .project-info h3 {
+    font-size: 19px;
+  }
+}
