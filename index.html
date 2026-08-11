@@ -3,34 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Raman's Portfolio</title>
+  <title>Raman Kumar | Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <nav>
-    <h2 class="logo">Raman</h2>
+    <h2 class="logo">Raman Kumar</h2>
     <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
   <header class="hero">
-    <h1 class="animate-text">Extraordinary Coding Projects</h1>
+    <h1 class="animate-text">.NET Fullstack Developer</h1>
     <p class="animate-sub">Creative • Modern • Professional</p>
   </header>
 
+  <section id="about" class="fade-in">
+    <h2>About Me</h2>
+    <p>BCA graduate with 3+ years of experience in Full Stack Development using .NET Core, ASP.NET, React.js, React Native, .Net MAUI, Vue.js, Web APIs, and SQL Server. Certified in .NET Full Stack Development from CS Infotech Pvt. Ltd., Chandigarh.</p>
+  </section>
+
+  <section id="skills" class="fade-in">
+    <h2>Technical Skills</h2>
+    <ul class="skills-grid">
+      <li>C#, .NET Core</li>
+      <li>ASP.NET MVC</li>
+      <li>React.js / React Native</li>
+      <li>Vue.js / .NET MAUI</li>
+      <li>SQL Server / MySQL</li>
+      <li>JWT Authentication</li>
+    </ul>
+  </section>
+
   <section id="projects" class="grid">
-    <div class="card fade-in">AI Chatbot</div>
-    <div class="card fade-in">Data Dashboard</div>
-    <div class="card fade-in">E-commerce Demo</div>
+    <h2>Projects</h2>
+    <div class="card zoom-in">
+      <h3>Expense Tracking System</h3>
+      <p>React.js, .NET Core, SQL Server</p>
+      <a href="http://essentials.antheminfotech.com/" target="_blank">View Project</a>
+    </div>
+    <div class="card zoom-in">
+      <h3>Attendance Management System</h3>
+      <p>React, .NET Core API, MS SQL</p>
+      <a href="http://themanagement.workanthem.com/" target="_blank">View Project</a>
+    </div>
+    <div class="card zoom-in">
+      <h3>Melodial Music Streaming</h3>
+      <p>React Native, .NET Web API</p>
+      <a href="https://app.melodial.com/" target="_blank">View Project</a>
+    </div>
+    <div class="card zoom-in">
+      <h3>SmrtE Construction AI</h3>
+      <p>.NET MAUI, Azure Web APIs</p>
+      <a href="https://smrte.ai/" target="_blank">View Project</a>
+    </div>
+    <div class="card zoom-in">
+      <h3>EzzyBills AI Platform</h3>
+      <p>Vue.js, .NET, Azure Web APIs</p>
+      <a href="https://ui2.ezzydoc.com/" target="_blank">View Project</a>
+    </div>
   </section>
 
-  <section id="contact" class="contact">
+  <section id="contact" class="contact fade-in">
     <h2>Get in Touch</h2>
-    <p>Email: ramansoni707@example.com</p>
+    <p>Email: <a href="mailto:raman.kumar07707@gmail.com">raman.kumar07707@gmail.com</a></p>
+    <p>Phone: <a href="tel:+918580507707">+91-8580507707</a></p>
+    <p>Location: Chandigarh, India</p>
   </section>
 
+  <footer>
+    <p>© 2026 Raman Kumar | Powered by GitHub Pages</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
