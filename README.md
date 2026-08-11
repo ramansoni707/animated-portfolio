@@ -1,14 +1,18 @@
-# Animated Portfolio Website
+# Raman Kumar — Animated Portfolio
 
-A modern portfolio with animations to showcase extraordinary coding projects.
+A light-purple, animation-heavy personal portfolio built with plain HTML, CSS and JavaScript.
 
-## 🚀 Features
-- Smooth fade, slide, and zoom animations
-- Interactive hover effects
-- Responsive design
+## Files
+- `index.html` — complete portfolio markup/content
+- `style.css` — responsive light-purple design + CSS character animations
+- `script.js` — scroll reveal, cursor glow, typing animation, 3D tilt, magnetic buttons, mobile menu, contact mailto
+- `Raman-Kumar-Resume.pdf` — resume used by the Download CV button
 
-## 🌐 Deployment
-1. Create a new repository named `animated-portfolio`.
-2. Upload `index.html`, `style.css`, and `README.md`.
-3. Enable **GitHub Pages** in Settings → Pages → Branch: main → Root.
-4. Your portfolio will be live at:
+## Run locally
+Open `index.html` in a browser.
+
+## GitHub Pages
+Push all files to your repository and enable:
+Settings → Pages → Deploy from branch → `main` → `/ (root)`
+
+The site is fully static, so no build command is required.
