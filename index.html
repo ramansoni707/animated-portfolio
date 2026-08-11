@@ -3,33 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gemini's Animated Portfolio</title>
+  <title>Raman's Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="fade-in">
-    <h1>Welcome to My Portfolio</h1>
-    <p>Extraordinary coding projects with style</p>
+  <nav>
+    <h2 class="logo">Raman</h2>
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h1 class="animate-text">Extraordinary Coding Projects</h1>
+    <p class="animate-sub">Creative • Modern • Professional</p>
   </header>
 
-  <section id="projects">
-    <h2 class="slide-in">Projects</h2>
-    <div class="project-card zoom-in">
-      <h3>AI Chatbot</h3>
-      <p>A Python-based chatbot using NLP libraries.</p>
-    </div>
-    <div class="project-card zoom-in">
-      <h3>Data Dashboard</h3>
-      <p>Interactive charts built with Plotly/Dash.</p>
-    </div>
-    <div class="project-card zoom-in">
-      <h3>E-commerce Demo</h3>
-      <p>Mock online store with cart & checkout flow.</p>
-    </div>
+  <section id="projects" class="grid">
+    <div class="card fade-in">AI Chatbot</div>
+    <div class="card fade-in">Data Dashboard</div>
+    <div class="card fade-in">E-commerce Demo</div>
   </section>
 
-  <footer class="fade-in">
-    <p>© 2026 Gemini | Powered by raman</p>
-  </footer>
+  <section id="contact" class="contact">
+    <h2>Get in Touch</h2>
+    <p>Email: ramansoni707@example.com</p>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
